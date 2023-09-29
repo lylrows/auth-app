@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="subcontainer">
+        <div class="title">
+            <img src="assets/icons/programador.png" width="100px" alt="">
+            <p>Sign In</p>
+        </div>
+        <div class="border">
+        </div>
+        <form [formGroup]="formLogin" (ngSubmit)="signIn()">
+            <mat-form-field class="box">
+                <mat-label>User</mat-label>
+                <input type="email" matInput formControlName="username"
+                    placeholder="pat@example.com">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password"
+                    placeholder="password">
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="primary" [disabled]="formLogin.invalid">Sign In</button>
+            <button type="submit" mat-raised-button color="accent">Sign Up</button>
+        </form>
+        <div class="footer">
+            <a href=""><small>Recuperar Contraseña</small></a>
+        </div>
+    </div>
+</div>  

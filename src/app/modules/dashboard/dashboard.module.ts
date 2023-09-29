@@ -1,35 +1,25 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { LoginComponent } from './modules/login/login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CommonModule } from '@angular/common';
+import { DashboardComponent } from './dashboard.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 //forms
 import { FormsModule } from '@angular/forms';
-
 //material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    //DashboardComponent,
-    LoginComponent
-  ],
+  declarations: [DashboardComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CommonModule, 
+    DashboardRoutingModule,
     HttpClientModule,
     //forms
     FormsModule,
@@ -39,9 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     ReactiveFormsModule,
     MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
     MatSnackBarModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class DashboardModule {}

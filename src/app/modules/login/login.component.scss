@@ -1,0 +1,41 @@
+@import './src/assets/styles/colors-all';
+
+.container {
+    color: $text-color;
+    height: 100%;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .subcontainer{
+        background-color: $bg-color;
+        border-radius: 10px 10px 10px 10px;
+        -moz-border-radius: 10px 10px 10px 10px;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border: 1px solid $border-color;
+        padding: 25px;
+        .title {
+            text-align: center;
+        }
+        .border{
+            border-top: solid 2px $secondary;
+            margin-bottom: 15px;
+        }
+        form {
+            text-align: center;
+            max-width: min-content;
+            button{
+                margin: 5px;
+            }
+        }
+        .footer{
+            
+            text-align: center;
+            padding: 10px;
+            a{
+                color: $text-color-secondary;
+            }
+        }
+    }
+  }
+  
